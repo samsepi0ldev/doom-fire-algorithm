@@ -1,0 +1,30 @@
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  width: 32px;
+  height: 32px;
+  font-size: 10px;
+  text-align: center;
+  vertical-align: center;
+  position: relative;
+  font-weight: bold;
+}
+
+.pixel-index {
+  font-size: 7px;
+  position: absolute;
+  display: inline-block;
+  top: 1px;
+  right: 1px;
+  color: #999;
+}
+
+.pixel {
+  width: 4px;
+  height: 4px;
+  border: 0;
+}

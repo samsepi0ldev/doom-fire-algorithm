@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doom Fire Effect</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-yellow-900">
+  <main class="w-full h-screen flex flex-col items-center justify-center gap-4">
+    <div class="fire-canvas border-black"></div>
+    <div class="text-xs flex flex-col items-center justify-center">
+      <div class="flex items-center gap-4 [&>button]:rounded [&>button]:bg-zinc-200 [&>button]:py-1 [&>button]:px-2 [&>button]:border [&>button]:border-zinc-900">
+        <button onclick="decreaseFireSource()">
+          -
+        </button>
+        <button onclick="destroyFireSource()">
+          Stop fire
+        </button>
+        <button onclick="createFireSource()">
+          Play fire
+        </button>
+        <button onclick="increaseFireSource()">
+          +
+        </button>
+      </div>
+      <button class="flex items-center gap-4 rounded bg-zinc-200 py-1 px-2 border border-zinc-900 my-2" onclick="changeDirection()">Change Direction</button>
+      <label for="negative" class="flex items-center gap-2 my-2 select-none">
+        <input type="checkbox" name="negative" id="negative">
+        Negative color
+      </label>
+      <button class="flex items-center gap-4 rounded bg-zinc-200 py-1 px-2 border border-zinc-900" onclick="debugMode()">
+        <i class="w-5" data-lucide="bug-play"></i>
+        Debug mode
+      </button>
+    </div>
+  </main>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -71,7 +71,7 @@ function updateFireIntensityPerPixel (currentPixelIndex) {
   
   if (bellowPixelIndex >= fireWidth * fireHeight) return
 
-  const decay = Math.floor(Math.random() * 3)
+  const decay = Math.floor(Math.random() * 3.0) & 3
 
   const belowPixelFireIntensity = firePixelArray[bellowPixelIndex]
   const newFireIntensity = belowPixelFireIntensity - decay >= 0 ? belowPixelFireIntensity - decay : 0
